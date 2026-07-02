@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.svg">
+  <title>Code Whisperer</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#editor" aria-label="Code Whisperer home">Code Whisperer</a>
+  </header>
+
+  <main class="workspace-grid">
+    <section id="editor" class="panel editor">
+      <label for="html">HTML:</label>
+      <textarea id="html" name="html" rows="10" cols="50" placeholder="Write HTML here..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" wrap="off"></textarea>
+
+      <label for="css">CSS:</label>
+      <textarea id="css" name="css" rows="10" cols="50" placeholder="Write CSS here..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" wrap="off"></textarea>
+
+      <label for="js">JS:</label>
+      <textarea id="js" name="js" rows="10" cols="50" placeholder="Write JavaScript here..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" wrap="off"></textarea>
+    </section>
+
+    <section id="preview-panel" class="panel preview">
+      <div class="preview-header">
+        <h2>Live Preview</h2>
+        <div class="controls">
+          <label><input type="checkbox" id="autoUpdate" checked> Auto-update</label>
+          <button id="runBtn" type="button">Run</button>
+          <button id="clearBtn" type="button">Clear</button>
+        </div>
+      </div>
+      <iframe id="preview" title="Live Preview"></iframe>
+    </section>
+  </main>
+  
+  <!-- Save notification -->
+  <div id="saveToast" class="save-toast" aria-live="polite">Saved</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
